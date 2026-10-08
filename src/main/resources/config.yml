@@ -1,0 +1,116 @@
+# ============================================================
+#  OreTop - konfiguracja
+#  Teksty używają formatu MiniMessage, np. <red>, <bold>, <#FFD700>
+#  Po zmianach wpisz /top reload
+# ============================================================
+
+settings:
+  # Co ile sekund zapisywać statystyki do bazy (SQLite, plik stats.db)
+  save-interval-seconds: 60
+  # Na jak długo cache'ować posortowane rankingi (sekundy)
+  cache-seconds: 5
+  # Nie licz statystyk graczom w trybie kreatywnym
+  ignore-creative: true
+  # Nie licz rud postawionych przez graczy (anty-farma; lista czyści się po restarcie)
+  ignore-player-placed-ores: true
+
+gui:
+  main-title: "<dark_gray>✦ Topki serwera"
+  top-title: "<dark_gray>Top » %name%"
+  stats-title: "<dark_gray>Statystyki » %player%"
+  # Materiał tła (wypełnienie pustych slotów)
+  filler: BLACK_STAINED_GLASS_PANE
+
+# Każdą kategorię można wyłączyć, zmienić nazwę, ikonę i slot (0-53)
+categories:
+  kills:
+    enabled: true
+    name: "<red><bold>Zabójstwa graczy"
+    description: "Ilu graczy zabiłeś"
+    material: DIAMOND_SWORD
+    slot: 10
+  deaths:
+    enabled: true
+    name: "<dark_gray><bold>Śmierci"
+    description: "Ile razy zginąłeś"
+    material: SKELETON_SKULL
+    slot: 12
+  mobs:
+    enabled: true
+    name: "<green><bold>Zabite moby"
+    description: "Ile potworów i zwierząt zabiłeś"
+    material: ROTTEN_FLESH
+    slot: 14
+  blocks:
+    enabled: true
+    name: "<gold><bold>Wykopane bloki"
+    description: "Ile bloków zniszczyłeś"
+    material: DIAMOND_PICKAXE
+    slot: 16
+  diamond:
+    enabled: true
+    name: "<aqua><bold>Diamenty"
+    description: "Wykopane rudy diamentu"
+    material: DIAMOND
+    slot: 20
+  emerald:
+    enabled: true
+    name: "<green><bold>Szmaragdy"
+    description: "Wykopane rudy szmaragdu"
+    material: EMERALD
+    slot: 21
+  netherite:
+    enabled: true
+    name: "<dark_purple><bold>Netheryt"
+    description: "Wykopany pradawny gruz (ancient debris)"
+    material: NETHERITE_SCRAP
+    slot: 22
+  gold:
+    enabled: true
+    name: "<yellow><bold>Złoto"
+    description: "Wykopane rudy złota (też nether gold)"
+    material: GOLD_INGOT
+    slot: 23
+  iron:
+    enabled: true
+    name: "<white><bold>Żelazo"
+    description: "Wykopane rudy żelaza"
+    material: IRON_INGOT
+    slot: 24
+  copper:
+    enabled: true
+    name: "<#E07A3F><bold>Miedź"
+    description: "Wykopane rudy miedzi"
+    material: COPPER_INGOT
+    slot: 29
+  redstone:
+    enabled: true
+    name: "<red><bold>Redstone"
+    description: "Wykopane rudy redstone"
+    material: REDSTONE
+    slot: 30
+  lapis:
+    enabled: true
+    name: "<blue><bold>Lapis"
+    description: "Wykopane rudy lapis lazuli"
+    material: LAPIS_LAZULI
+    slot: 31
+  coal:
+    enabled: true
+    name: "<dark_gray><bold>Węgiel"
+    description: "Wykopane rudy węgla"
+    material: COAL
+    slot: 32
+  quartz:
+    enabled: true
+    name: "<white><bold>Kwarc"
+    description: "Wykopane rudy kwarcu (Nether)"
+    material: QUARTZ
+    slot: 33
+
+messages:
+  only-player: "<red>Tej komendy może użyć tylko gracz."
+  no-permission: "<red>Nie masz uprawnień."
+  unknown-category: "<red>Nieznana kategoria. Dostępne: <yellow>%list%"
+  player-not-found: "<red>Nie znaleziono gracza <yellow>%player%<red> w bazie."
+  reloaded: "<green>Konfiguracja OreTop przeładowana."

@@ -1,0 +1,26 @@
+name: OreTop
+version: '1.0.0'
+main: pl.oretop.OreTopPlugin
+api-version: '26.2'
+description: Topki graczy - zabojstwa, smierci, wykopane rudy. Ladne GUI.
+authors: [OreTop]
+
+commands:
+  top:
+    description: Otwiera menu topek (lub konkretny ranking)
+    usage: /<command> [kategoria|reload]
+    aliases: [oretop, topki, leaderboard]
+    permission: oretop.use
+  stats:
+    description: Pokazuje statystyki swoje lub innego gracza
+    usage: /<command> [gracz]
+    aliases: [statystyki, playerstats]
+    permission: oretop.use
+
+permissions:
+  oretop.use:
+    description: Dostep do menu topek i statystyk
+    default: true
+  oretop.admin:
+    description: Przeladowanie konfiguracji
+    default: op
